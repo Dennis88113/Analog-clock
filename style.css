@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: black;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+.rolex {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 43%;
+}
+
+.clock:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #000000;
+  border-radius: 50%;
+  border: #e0d499 1px dotted;
+  z-index: 100;
+}
+
+.clock-face {
+  position: absolute;
+  width: 350px;
+  top: 18%;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+  z-index: 88;
+}
+
+.clock .hour,
+.hr {
+  width: 150px;
+  height: 100px;
+}
+
+.clock .min,
+.mn {
+  width: 190px;
+  height: 175px;
+}
+
+.clock .sec,
+.sc {
+  width: 230px;
+  height: 203px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.hr:before {
+  border: 1px solid rgb(57, 216, 89);
+  clip-path: polygon(34% 0, 100% 60%, 55% 80%, 0 100%, 19% 45%);
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(224, 212, 153);
+  z-index: 10;
+}
+
+.mn:before {
+  clip-path: polygon(34% 0, 100% 60%, 55% 80%, 0 100%, 19% 45%);
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 90px;
+  background-color: #e0d499;
+  z-index: 11;
+}
+
+.sc:before {
+  clip-path: polygon(34% 0, 100% 60%, 55% 80%, 0 100%, 19% 45%);
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: rgb(253, 0, 0);
+  z-index: 12;
+}
+
+.date {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: #e0d499;
+  font-weight: bold;
+  text-shadow: 0px 0px 15px rgba(175, 152, 39, 1);
+  font-size: 15px;
+  top: 236px;
+  left: 78px;
+  z-index: 100;
+  justify-content: center;
+}
+
+.month {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  top: 132px;
+  left: 179px;
+  text-align: center;
+  font-size: 10px;
+  transform: rotate(-40deg);
+  z-index: 25;
+}
+
+span {
+  font-weight: bolder;
+  color: #e0d499;
+  display: inline-block;
+  width: 15px;
+  position: absolute;
+  transform: translate(0px, 0px) rotate(var(--rot)) translate(0, -55px);
+  text-shadow: 0px 0px 15px rgba(175, 152, 39, 1);
+}
+
+.logo {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  bottom: -131px;
+  z-index: -50;
+}
